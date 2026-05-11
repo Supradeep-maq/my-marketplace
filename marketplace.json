@@ -1,7 +1,10 @@
 {
   "name": "my-mcp-marketplace",
   "version": "1.0.0",
-  "owner": "Supradeep-maq",
+  "owner": {
+    "name": "Supradeep-maq",
+    "url": "https://github.com/Supradeep-maq"
+  },
   "description": "A marketplace for MCP plugins - configuration only, no custom code",
   "repository": "https://github.com/Supradeep-maq/my-marketplace",
   "plugins": [
