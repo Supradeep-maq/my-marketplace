@@ -1,0 +1,21 @@
+{
+  "name": "my-mcp-marketplace",
+  "version": "1.0.0",
+  "description": "A marketplace for MCP plugins - configuration only, no custom code",
+  "repository": "https://github.com/yourusername/my-marketplace",
+  "plugins": [
+    {
+      "id": "workiq-helper",
+      "name": "Work IQ Email Helper",
+      "version": "1.0.0",
+      "description": "Summarize Work IQ emails and extract action items - configuration only",
+      "path": "plugins/workiq-helper",
+      "mcp_config": ".mcp.json",
+      "tools": [
+        "summarize_email",
+        "extract_action_items",
+        "get_email_sentiment"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "workiq-helper",
+  "name": "Work IQ Email Helper",
+  "version": "1.0.0",
+  "description": "Summarize Work IQ emails and extract action items - configuration only, no custom code",
+  "type": "mcp-plugin",
+  "runtime": "extension",
+  "tools": [
+    {
+      "name": "summarize_email",
+      "description": "Summarize an email or email thread from Work IQ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email_id": {
+            "type": "string",
+            "description": "Email ID or thread ID from Work IQ"
+          },
+          "summary_type": {
+            "type": "string",
+            "enum": ["brief", "detailed", "action-items"],
+            "description": "Type of summary to generate",
+            "default": "brief"
+          }
+        },
+        "required": ["email_id"]
+      }
+    },
+    {
+      "name": "extract_action_items",
+      "description": "Extract action items and tasks from Work IQ emails",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email_id": {
+            "type": "string",
+            "description": "Email ID or thread ID from Work IQ"
+          }
+        },
+        "required": ["email_id"]
+      }
+    },
+    {
+      "name": "get_email_sentiment",
+      "description": "Analyze the sentiment and tone of Work IQ emails",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "email_id": {
+            "type": "string",
+            "description": "Email ID from Work IQ"
+          }
+        },
+        "required": ["email_id"]
+      }
+    }
+  ]
+}
