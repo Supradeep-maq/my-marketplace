@@ -2,7 +2,11 @@
   "mcpServers": {
     "workiq": {
       "command": "npx",
-      "args": ["-y", "@microsoft/workiq"]
+      "args": ["-y", "@microsoft/workiq", "mcp"]
+    },
+    "gmail": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gmail"]
     }
   }
 }
