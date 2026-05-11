@@ -3,10 +3,6 @@
     "workiq": {
       "command": "npx",
       "args": ["-y", "@microsoft/workiq", "mcp"]
-    },
-    "gmail": {
-      "command": "npx",
-      "args": ["-y", "@gongrzhe/server-gmail-autoauth-mcp"]
     }
   }
 }
