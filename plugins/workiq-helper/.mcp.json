@@ -6,7 +6,7 @@
     },
     "gmail": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-gmail"]
+      "args": ["-y", "@gongrzhe/server-gmail-autoauth-mcp"]
     }
   }
 }
