@@ -1,105 +1,64 @@
 # Work IQ Email Helper
 
-**Configuration-only MCP plugin** for Work IQ email summarization and action item extraction.
+Simple plugin that uses the **Work IQ MCP server** for email operations.
 
-No custom code required - pure configuration!
+Work IQ MCP automatically handles Outlook authentication and email fetching - no setup needed!
 
 ---
 
 ## 🚀 Installation
 
-This plugin is designed to be installed via GitHub Copilot CLI marketplace commands.
-
-### From GitHub
-
 ```powershell
-# Add the marketplace
-copilot plugin marketplace add yourusername/my-marketplace
-
-# Browse available plugins
-copilot plugin marketplace browse workiq-helper
-
-# Install the plugin
-copilot plugin install workiq-helper
+copilot plugin marketplace add Supradeep-maq/my-marketplace
+copilot plugin install workiq-email-helper@my-mcp-marketplace
 ```
 
 ---
 
-## ✨ Available Tools
+## ✨ Usage
 
-### 1. `summarize_email`
-Summarize Work IQ emails or email threads
+Work IQ MCP automatically connects to your Outlook. Just ask:
 
-**Parameters:**
-- `email_id` (required): Email ID or thread ID from Work IQ
-- `summary_type`: "brief", "detailed", or "action-items"
-
-**Example:**
 ```
-Summarize email ID abc123 from Work IQ
-```
-
-### 2. `extract_action_items`
-Extract action items and tasks from emails
-
-**Parameters:**
-- `email_id` (required): Email ID or thread ID from Work IQ
-
-**Example:**
-```
-Extract action items from email ID abc123
-```
-
-### 3. `get_email_sentiment`
-Analyze sentiment and tone of emails
-
-**Parameters:**
-- `email_id` (required): Email ID from Work IQ
-
-**Example:**
-```
-What's the sentiment of email ID abc123?
+Summarize my latest email
+Extract action items from my last 5 emails
+What's the sentiment of my recent emails?
 ```
 
 ---
 
-## 📋 Configuration
+## 📋 Structure
 
-This plugin uses `.mcp.json` for configuration - no code files needed!
-
-All tools are defined declaratively in:
-- `.mcp.json` - MCP server configuration
-- `plugin.json` - Tool definitions and schemas
-
----
-
-## 🎯 Usage with Copilot CLI
-
-After installation, use the tools naturally in conversation:
-
-```powershell
-copilot "Summarize my Work IQ email ID abc123"
-copilot "Extract action items from email thread def456"
-copilot "Analyze the sentiment of email ghi789"
 ```
-
-Or in interactive mode:
-```powershell
-copilot
-> Summarize email abc123 with detailed summary
-> Extract action items from email def456
+workiq-helper/
+├── .mcp.json           # References Work IQ MCP server
+├── plugin.json         # Plugin metadata and skills
+├── README.md
+└── skills/            # AI guidance for using email tools
+    ├── email-summary.md
+    ├── action-items.md
+    └── email-sentiment.md
 ```
 
 ---
 
-## 🔧 No Code Required
+## 🔧 How It Works
 
-This plugin demonstrates configuration-only MCP:
-- ✅ No Python/Node.js code
-- ✅ No dependencies to install
-- ✅ Easy to understand and modify
-- ✅ Works across platforms
-- ✅ Pure JSON/Markdown configuration
+This plugin simply references the **Work IQ MCP server** (`@microsoft/work-iq-mcp`):
+- ✅ Work IQ handles Outlook authentication automatically
+- ✅ No Graph API setup needed
+- ✅ No custom code - just skills configuration
+- ✅ Works out of the box
+
+---
+
+## 🎯 Available Skills
+
+- **email-summary** - Summarize emails
+- **action-items** - Extract tasks from emails  
+- **email-sentiment** - Analyze email tone
+
+All powered by Work IQ MCP!
 
 ---
 

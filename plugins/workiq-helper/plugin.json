@@ -1,58 +1,33 @@
 {
   "id": "workiq-helper",
-  "name": "Work IQ Email Helper",
+  "name": "workiq-email-helper",
+  "displayName": "Work IQ Email Helper",
   "version": "1.0.0",
-  "description": "Summarize Work IQ emails and extract action items - configuration only, no custom code",
+  "description": "Email summarization using Work IQ MCP server",
+  "author": "Your Team",
+  "license": "MIT",
   "type": "mcp-plugin",
-  "runtime": "extension",
   "tools": [
+    "skills/email-summary",
+    "skills/action-items",
+    "skills/email-sentiment"
+  ],
+  "skills": [
     {
-      "name": "summarize_email",
-      "description": "Summarize an email or email thread from Work IQ",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "email_id": {
-            "type": "string",
-            "description": "Email ID or thread ID from Work IQ"
-          },
-          "summary_type": {
-            "type": "string",
-            "enum": ["brief", "detailed", "action-items"],
-            "description": "Type of summary to generate",
-            "default": "brief"
-          }
-        },
-        "required": ["email_id"]
-      }
+      "name": "email-summary",
+      "description": "Summarize emails from Outlook",
+      "references": ["./skills/email-summary.md"]
     },
     {
-      "name": "extract_action_items",
-      "description": "Extract action items and tasks from Work IQ emails",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "email_id": {
-            "type": "string",
-            "description": "Email ID or thread ID from Work IQ"
-          }
-        },
-        "required": ["email_id"]
-      }
+      "name": "action-items",
+      "description": "Extract action items from emails",
+      "references": ["./skills/action-items.md"]
     },
     {
-      "name": "get_email_sentiment",
-      "description": "Analyze the sentiment and tone of Work IQ emails",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "email_id": {
-            "type": "string",
-            "description": "Email ID from Work IQ"
-          }
-        },
-        "required": ["email_id"]
-      }
+      "name": "email-sentiment",
+      "description": "Analyze email sentiment",
+      "references": ["./skills/email-sentiment.md"]
     }
-  ]
+  ],
+  "mcpServers": ["workiq"]
 }

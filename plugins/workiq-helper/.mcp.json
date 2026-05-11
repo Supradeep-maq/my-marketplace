@@ -1,49 +1,9 @@
 {
   "mcpServers": {
-    "workiq-helper": {
-      "type": "extension",
-      "extensionId": "workiq-email-tools",
-      "actions": [
-        {
-          "name": "summarize_email",
-          "description": "Summarize an email or email thread from Work IQ",
-          "parameters": {
-            "email_id": {
-              "type": "string",
-              "required": true,
-              "description": "Email ID or thread ID from Work IQ"
-            },
-            "summary_type": {
-              "type": "string",
-              "enum": ["brief", "detailed", "action-items"],
-              "default": "brief",
-              "description": "Type of summary to generate"
-            }
-          }
-        },
-        {
-          "name": "extract_action_items",
-          "description": "Extract action items and tasks from Work IQ emails",
-          "parameters": {
-            "email_id": {
-              "type": "string",
-              "required": true,
-              "description": "Email ID or thread ID from Work IQ"
-            }
-          }
-        },
-        {
-          "name": "get_email_sentiment",
-          "description": "Analyze the sentiment and tone of Work IQ emails",
-          "parameters": {
-            "email_id": {
-              "type": "string",
-              "required": true,
-              "description": "Email ID from Work IQ"
-            }
-          }
-        }
-      ]
+    "workiq": {
+      "command": "npx",
+      "args": ["@microsoft/work-iq-mcp@latest", "-mcp"],
+      "tools": ["**"]
     }
   }
 }
