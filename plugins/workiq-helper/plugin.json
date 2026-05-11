@@ -6,28 +6,14 @@
   "description": "Email summarization using Work IQ MCP server",
   "author": "Your Team",
   "license": "MIT",
-  "type": "mcp-plugin",
-  "tools": [
-    "skills/email-summary",
-    "skills/action-items",
-    "skills/email-sentiment"
-  ],
   "skills": [
-    {
-      "name": "email-summary",
-      "description": "Summarize emails from Outlook",
-      "references": ["./skills/email-summary.md"]
-    },
-    {
-      "name": "action-items",
-      "description": "Extract action items from emails",
-      "references": ["./skills/action-items.md"]
-    },
-    {
-      "name": "email-sentiment",
-      "description": "Analyze email sentiment",
-      "references": ["./skills/email-sentiment.md"]
-    }
+    "skills/email-summary.md",
+    "skills/action-items.md",
+    "skills/email-sentiment.md"
   ],
-  "mcpServers": ["workiq"]
+  "references": [
+    "skills/email-summary.md",
+    "skills/action-items.md",
+    "skills/email-sentiment.md"
+  ]
 }
