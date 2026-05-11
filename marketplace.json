@@ -14,9 +14,7 @@
       "displayName": "Work IQ Email Helper",
       "version": "1.0.0",
       "description": "Summarize Work IQ emails and extract action items - configuration only",
-      "source": "https://github.com/Supradeep-maq/my-marketplace/tree/main/plugins/workiq-helper",
-      "path": "plugins/workiq-helper",
-      "mcp_config": ".mcp.json",
+      "source": "plugins/workiq-helper",
       "tools": [
         "summarize_email",
         "extract_action_items",
