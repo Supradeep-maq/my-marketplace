@@ -2,7 +2,7 @@
   "name": "my-mcp-marketplace",
   "version": "1.0.0",
   "description": "A marketplace for MCP plugins - configuration only, no custom code",
-  "repository": "https://github.com/yourusername/my-marketplace",
+  "repository": "https://github.com/Supradeep-maq/my-marketplace",
   "plugins": [
     {
       "id": "workiq-helper",
